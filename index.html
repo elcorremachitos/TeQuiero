@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+<audio id="musicPlayer" autoplay loop>
+    <source src="./sources/sounds/music1.mp3" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<div class="main">
+    <div class="reproductor">
+        <p id="countdown">Te quiero mi tigrecita 🐯</p>
+        <div class="disc">
+            <img src="./sources/images/MyLove.jpeg" alt="">
+        </div>
+        <div class="info">
+            <h1>Te quiero mucho</h1>
+            <p>dale click jeje</p>
+        </div>
+        <button id="playPauseBtn" class="control-btn">
+            <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5V19L19 12L8 5Z" fill="white"/>
+            </svg>
+            <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="white"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script src="./scripts/index.js"></script>
+</body>
+</html>
