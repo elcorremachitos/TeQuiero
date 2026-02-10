@@ -1,6 +1,7 @@
 // CONTROL DEL REPRODUCTOR
 const musicPlayer = document.getElementById('musicPlayer');
 const playPauseBtn = document.getElementById('playPauseBtn');
+const discImage = document.querySelector('.disc img');
 const disc = document.querySelector('.disc');
 
 let isPlaying = false;
@@ -11,7 +12,8 @@ playPauseBtn.classList.toggle('paused');
 
 playPauseBtn.addEventListener('click', () => {
     if (!isPlaying) {
-        showCountdown()
+        discImage.src = './sources/images/astralMap.png';
+        showCountdown();
         musicPlayer.play();
         disc.style.animationPlayState = 'running';
         playPauseBtn.classList.toggle('paused');
@@ -46,9 +48,11 @@ setTimeout(() => {
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const particles = [];
-const colors = ['255, 105, 180, 0.5', '255, 20, 147, 0.6', '219, 112, 147, 0.5'];
+const colors = ['255, 255, 255, 0.9','200, 220, 255, 0.7','180, 200, 255, 0.6','255, 245, 220, 0.6'];
 
-const hearthPath = new Path2D("M23.6,0c-3.4,0-6.4,2.1-7.6,5.1C14.8,2.1,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.3,16,20.6,16,20.6s16-11.3,16-20.6C32,3.8,28.2,0,23.6,0z");
+
+const hearthPath = new Path2D("M16 0 L20 11 L32 12 L23 19 L26 32 L16 25 L6 32 L9 19 L0 12 L12 11 Z");
+
 
 class Particle {
     constructor(x, y, minR, maxR, color, speed) {
@@ -108,7 +112,7 @@ function getURLParam(name) {
 function showCountdown() {
     const container = document.getElementById('countdown');
     let startParam = getURLParam('start');
-    let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2025-10-04T00:00:00');
+    let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2025-11-07T00:00:00');
 
     function update() {
         const now = new Date();
@@ -119,8 +123,8 @@ function showCountdown() {
         let seconds = Math.floor((diff / 1000) % 60);
 
         container.innerHTML =
-            `Estoy loco por ti desde hace: <br></br> 
-            <b>${days}</b> días, <b>${hours}</b> horas, <b>${minutes}</b> minutos y <b>${seconds}</b> segundos`
+            `Te dedico esta cancion por los: <br><br> 
+            <b>${days}</b> días, <b>${hours}</b> horas, <b>${minutes}</b> minutos y <b>${seconds}</b> segundos <br><b>Junto a ti 💕</b>`
         container.classList.add('visible')
     }
     update();

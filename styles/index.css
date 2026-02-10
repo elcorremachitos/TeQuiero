@@ -10,19 +10,6 @@
 :root {
     --green: #82cd21;
 }
-
-body {
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
-    background: radial-gradient(circle at top left, #a85581 0%, #8f3d6b 40%, #7a2d5a 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* HOJAS CONTAINER */
 .hojas-container {
     width: 100%;
@@ -184,7 +171,7 @@ body {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    background: radial-gradient(circle at top left, #a85581 0%, #8f3d6b 40%, #7a2d5a 100%);
+    background: radial-gradient(circle at top left, #1b2a4e 0%, #0f1c3a 40%, #050914 100%);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -259,7 +246,8 @@ body {
     width: 23%;
     min-width: 450px;
     padding: 50px;
-    background: rgb(255, 0, 127, 0.3);
+    background: rgba(60, 90, 160, 0.25);
+    backdrop-filter: blur(6px);
     box-sizing: border-box;
     border-radius: 15px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
@@ -337,3 +325,4 @@ body {
     opacity: 0;
     transform: scale(1.5);
 }
+
